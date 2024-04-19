@@ -44,43 +44,49 @@
 //     console.log(event.target)
 // })
 
-const colorPalette = document.querySelector(".color-palette")
-const output = document.querySelector(".output")
 
-colorPalette.addEventListener('click', selectColor)
 
-function selectColor(event) {
-    if (event.target.nodeName !== "BUTTON") {
-        return
-    }
+// const { title, author, isPublic, rating } = book
 
-    const selectedColor = event.target.dataset.color
-    output.textContent = `Selected color: ${selectedColor}`
-    output.style.color = selectedColor
-}
+// const accessType = isPublic ? "public" : "private"
+// const message = `Book ${title} by author ${author} with rating ${rating} is in ${accessType} access!`
 
-createPaletteItems()
+// console.log(title)
+// console.log(author)
+// console.log(rating)
 
-function createPaletteItems() {
-   const items = []
-    for (let i = 0; i < 60; i++) {
-        const colors = getRandomHexColor()
-        const item = document.createElement("button")
-        item.type = "button"
-        item.dataset.color = colors
-        item.style.backgroundColor = colors
-        item.classList.add("item")
-        items.push(item)
-    }
-    colorPalette.append(...items)
-}
+// const books = [
+//   {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     rating: 8.38,
+//   },
+//   {
+//     title: "Beside Still Waters",
+//     author: "Robert Sheckley",
+//     rating: 8.51,
+//   },
+// ];
 
-function getRandomHexColor() {
-    const letters = "0123456789ABCDEF"
-    let color = "#"
-    for (let i = 0; i < 6; i++) {
-        color += letters[Math.floor(Math.random() * 16)]
-    }
-    return color
-}
+// for (const book of books) {
+//   console.log(book.title);
+//   console.log(book.author);
+//   console.log(book.rating);
+// }
+
+// const book = {
+//     title: "The last Kingdom",
+//     author: "Bernard Cornwell",
+//     genres: ["historical prose", "adventure"],
+//     isPublic: true,
+//     rating: 8.71,
+// }
+
+// for (const book of books) {
+//   const { title, author, rating } = book;
+
+//   console.log(title);
+//   console.log(author);
+//   console.log(rating);
+// }
 

@@ -3,31 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Document</title>  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.css">
     <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
 </head>
 <body>
-        <div id="parent">
-            Parent
-            <div id="child">
-                Child
-                <div id="descendant">Descendant</div>
-            </div>
-        </div>
-        <div class="box">
-            <button>Button 1</button>
-            <button>Button 2</button>
-            <button>Button 3</button>
-            <button>Button 4</button>
-            <button>Button 5</button>
-            <button>Button 6</button>
-            <button>Button 7</button>
-            <button>Button 8</button>
-        </div>
-        <p class="output">Selected color: -</p>
-        <div class="color-palette"></div>
-        <script async src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
-        <script src="./js/test.js" defer></script>
-        <script src="./js/test-2.js"></script>
+    <div class="container">
+
+        <section>
+            <div id="parent">
+                Parent
+                <div id="child">
+                    Child
+                    <div id="descendant">Descendant</div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="box">
+                    <button class="button-numbers" type="button">Button 1</button>
+                    <button class="button-numbers" type="button">Button 2</button>
+                    <button class="button-numbers" type="button">Button 3</button>
+                    <button class="button-numbers" type="button">Button 4</button>
+                    <button class="button-numbers" type="button">Button 5</button>
+                    <button class="button-numbers" type="button">Button 6</button>
+                    <button class="button-numbers" type="button">Button 7</button>
+                    <button class="button-numbers" type="button">Button 8</button>
+                </div>
+            </section>
+            <section class="section-palette">
+                <p class="output">Selected color: -</p>
+                <div class="color-palette"></div>
+            </section>
+            <script async src="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.js"></script>
+            <section class="gallery-section">
+                <ul class="gallery"></ul>
+            </section>
+            <script src="./js/test.js" defer></script>
+            <script src="./js/test-2.js" defer></script>
+            <script src="./js/gallery.js" defer></script>
+    </div>
 </body>
 </html>

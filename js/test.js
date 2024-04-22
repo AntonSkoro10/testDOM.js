@@ -1,18 +1,18 @@
-// const parent = document.querySelector("#parent")
-// const child = document.querySelector("#child")
-// const descendant = document.querySelector("#descendant")
+const parent = document.querySelector("#parent")
+const child = document.querySelector("#child")
+const descendant = document.querySelector("#descendant")
 
-// parent.addEventListener('click', () => {
-//     console.log("Parent click heandler")
-// })
+parent.addEventListener('click', () => {
+    console.log("Parent click heandler")
+})
 
-// child.addEventListener('click', () => {
-//     console.log("Child click heandler")
-// })
+child.addEventListener('click', () => {
+    console.log("Child click heandler")
+})
 
-// descendant.addEventListener('click', () => {
-//     console.log("Descendant click heandler")
-// })
+descendant.addEventListener('click', () => {
+    console.log("Descendant click heandler")
+})
 
 // const parent = document.querySelector('#parent')
 
@@ -37,56 +37,4 @@
 //     event.stopPropagation()
 //     alert("Descendant click handler")
 // })
-
-// const boxButtons = document.querySelector('div.box')
-
-// boxButtons.addEventListener('click', function (event) {
-//     console.log(event.target)
-// })
-
-
-
-// const { title, author, isPublic, rating } = book
-
-// const accessType = isPublic ? "public" : "private"
-// const message = `Book ${title} by author ${author} with rating ${rating} is in ${accessType} access!`
-
-// console.log(title)
-// console.log(author)
-// console.log(rating)
-
-// const books = [
-//   {
-//     title: "The Last Kingdom",
-//     author: "Bernard Cornwell",
-//     rating: 8.38,
-//   },
-//   {
-//     title: "Beside Still Waters",
-//     author: "Robert Sheckley",
-//     rating: 8.51,
-//   },
-// ];
-
-// for (const book of books) {
-//   console.log(book.title);
-//   console.log(book.author);
-//   console.log(book.rating);
-// }
-
-// const book = {
-//     title: "The last Kingdom",
-//     author: "Bernard Cornwell",
-//     genres: ["historical prose", "adventure"],
-//     isPublic: true,
-//     rating: 8.71,
-// }
-
-// for (const book of books) {
-//   const { title, author, rating } = book;
-
-//   console.log(title);
-//   console.log(author);
-//   console.log(rating);
-// }
 

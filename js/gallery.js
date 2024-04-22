@@ -65,6 +65,7 @@ const images = [
 ];
 
 const gallery = document.querySelector('ul.gallery')
+const fragment = document.createDocumentFragment()
 
 gallery.addEventListener('click', function (event) {
     if (event.target.classList.contains('gallery-img')) {
@@ -89,10 +90,12 @@ images.forEach(image => {
     galleryImg.setAttribute('data-source', image.original)
     galleryImg.alt = image.description
 
-    galleryImg.width = 300
-    galleryImg.height = 200
-    
+    galleryImg.width = 350
+    galleryImg.height = 250
+
     galleryLink.appendChild(galleryImg)
-    galleryItem.appendChild(galleryLink)
-    gallery.appendChild(galleryItem)
-});
+    galleryItem.appendChild(galleryLink)   
+    fragment.appendChild(galleryItem)
+})
+
+gallery.appendChild(fragment)

@@ -135,7 +135,7 @@ section {
 }
 
 .gallery-item {
-    width: calc(30.33% - 77px);
+    width: calc(29.33% - 80px);
     margin: 5px;
     transition: transform 0.3s ease-in-out;
 }

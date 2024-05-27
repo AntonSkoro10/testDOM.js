@@ -158,25 +158,35 @@ section {
         transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.is-open {
-    opacity: 1;
-        pointer-events: auto;
-        visibility: visible;
-    }
+
 
 
 .modal {
-    position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+        top: 0;
+        left: 0;
         width: 408px;
         min-height: 584px;
         padding: 72px 24px 24px;
         border-radius: 4px;
         box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
         background-color: var(--DAIRY, #FCFCFC);
+        transform: translateX(100%);
         transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1)
+}
+
+.is-open{
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.modal.is-open{
+    transform: translateX(0%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .cls-btn {
@@ -508,7 +518,7 @@ position: absolute;
     background-color: #404bbf;
 }
 
-.burger-btn {
+.burger-btn-js {
     border: none;
     border-radius: 4px;
     background-color: blue;
@@ -516,8 +526,8 @@ position: absolute;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 
-.burger-btn:hover,
-.burger-btn:focus {
+.burger-btn-js:hover,
+.burger-btn-js:focus {
     background-color: yellow;
     stroke: blue;
 }    
@@ -605,5 +615,51 @@ position: absolute;
 
 .open-modal-btn:hover {
     background-color: #555;
+}
+
+.button-succes {
+    background-color: #28a745;
+    /* Зелений колір для кнопки успіху */
+    color: white;
+    /* Білий колір тексту */
+    border: none;
+    /* Без обрамлення */
+    padding: 10px 20px;
+    /* Внутрішні відступи */
+    font-size: 16px;
+    /* Розмір шрифту */
+    border-radius: 5px;
+    /* Округлені кути */
+    cursor: pointer;
+    /* Курсор у вигляді руки */
+    position: fixed;
+    /* Фіксована позиція */
+    bottom: 20px;
+    /* Відступ знизу */
+    right: 20px;
+    /* Відступ праворуч */
+    transform: translateX(100%);
+    transition: transform 265ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button-succes.is-visible {
+    transform: translateX(-5%);
+    transition: transform 265ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button-succes:hover {
+    background-color: #218838;
+    /* Трохи темніший зелений при наведенні */
+}
+
+.button-succes:active {
+    background-color: #1e7e34;
+    /* Ще темніший зелений при натисканні */
+}
+
+.is-visible {
+    visibility: visible;
+    pointer-events: auto;
+    opacity: 1;
 }
 

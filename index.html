@@ -10,11 +10,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap"
         rel="stylesheet">
+        <link rel="stylesheet" href="./sprite.svg">
 </head>
 <body>
     <header>
        <div class="backdrop is-open">
-        <div class="modal">
+        <div class="modal is-open">
           <button class="cls-btn" type="button">
             <svg class="cls-btn-icon" width="8" height="8">
               <use href="./sprite.svg#icon-x"></use>
@@ -69,7 +70,7 @@
           </form>
         </div>
       </div>
-      <button class="burger-btn">
+      <button class="burger-btn-js button">
         <svg class="burger-btn-icon" width="20" height="18">
             <use href="./sprite.svg#icon-burger"></use>
         </svg>
@@ -128,7 +129,7 @@
                     </nav>
                 </div>
                 
-                <button class="open-modal-btn">Open Modal</button>
+                <button type="button" class="button-succes js-btn-succes is-visible">Succes</button>
             </footer>
             <script src="./js/test.js" defer></script>
             <script src="./js/test-2.js" defer></script>
@@ -136,6 +137,8 @@
             <script src="./js/test-3.js" defer></script>
             <script src="./js/localstorage.js" defer></script>
             <script src="./js/test-4.js" defer></script>
-            <script src="./js/test-5.js" defer></script>
+            <!-- <script src="./js/test-5.js" defer></script> -->
+            <script src="./js/test-6.js" defer></script>
+
 </body>
 </html>

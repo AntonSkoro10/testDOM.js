@@ -1,7 +1,26 @@
-console.log("first log")
+document.addEventListener('DOMContentLoaded', () => {
+    const backdrop = document.querySelector('.backdrop');
+    const burgerButton = document.querySelector('.burger-btn');
+    const closeModalButton = document.querySelector('.cls-btn');
 
-setTimeout(() => {
-    console.log("second log")
-}, 2000)
+    // Open modal when burger button is clicked
+    burgerButton.addEventListener('click', () => {
+        backdrop.classList.add('is-open');
+        backdrop.classList.remove('is-closed');
+    });
 
-console.log("third log")
+    // Close modal when close button is clicked
+    closeModalButton.addEventListener('click', () => {
+        backdrop.classList.remove('is-open');
+        backdrop.classList.add('is-closed');
+    });
+
+    // Close modal when clicking outside the modal content
+    window.addEventListener('click', (event) => {
+        if (event.target === backdrop) {
+            backdrop.classList.remove('is-open');
+            backdrop.classList.add('is-closed');
+        }
+    });
+});
+

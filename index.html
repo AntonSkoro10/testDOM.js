@@ -114,22 +114,26 @@
                 </form>
             </section>
             <footer>
-                <div class="backdrop-2 is-open"></div>
-                
-                <!-- Modal with Mobile Menu -->
-                <div class="modal-2">
-                    <button class="close-btn-2">&times;</button>
-                    <nav class="mobile-menu">
-                        <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Services</a></li>
-                            <li><a href="#">Contact</a></li>
-                        </ul>
-                    </nav>
+                <input type="text" id="datetime-picker" />
+                <button class="button-start" id="start-btn" type="button" disabled data-start>Start</button>
+                <div class="timer">
+                  <div class="field">
+                    <span class="value" data-days>00</span>
+                    <span class="label">Days</span>
+                  </div>
+                  <div class="field">
+                    <span class="value" data-hours>00</span>
+                    <span class="label">Hours</span>
+                  </div>
+                  <div class="field">
+                    <span class="value" data-minutes>00</span>
+                    <span class="label">Minutes</span>
+                  </div>
+                  <div class="field">
+                    <span class="value" data-seconds>00</span>
+                    <span class="label">Seconds</span>
+                  </div>
                 </div>
-                
-                <button type="button" class="button-succes js-btn-succes is-visible">Succes</button>
             </footer>
             <script src="./js/test.js" defer></script>
             <script src="./js/test-2.js" defer></script>
@@ -137,7 +141,7 @@
             <script src="./js/test-3.js" defer></script>
             <script src="./js/localstorage.js" defer></script>
             <script src="./js/test-4.js" defer></script>
-            <!-- <script src="./js/test-5.js" defer></script> -->
+            <script src="./js/test-5.js" defer></script>
             <script src="./js/test-6.js" defer></script>
 
 </body>
